@@ -1,6 +1,12 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![title](https://user-images.githubusercontent.com/93433413/184173169-3d838f16-e618-4384-9229-b87eb41f778e.png)
+
+# 당신은 커피가 땡긴다. 
+
+### 아침에 눈을 뜨고 맡는 향긋한 커피냄새, 상상만해도 기분이 좋아지죠 :) ?
+
+    어느덧 일상의 한 부분이 되어버린 기호 식품인 [커피]를
+    보다 전문적으로 마시고 싶은 마니아층을 위한 고급진 커피 커뮤니티에 어서오세요 😊
 
 ## Available Scripts
 
