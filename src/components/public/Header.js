@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import {YellowLogoEn} from "../assets/logo"
+import {TextLogo} from "../../assets/logo"
 
 const Header =()=>{
   return(
     <Wrap>
       <div className="headerManu">      
         <div className="logoArea">
-          <img src={YellowLogoEn}/>
+          <img src={TextLogo}/>
         </div>
         <div className="blank">
           Eppo님 어서오세요 :D
@@ -42,7 +42,7 @@ justify-content: center;
     justify-content: flex-start;
     padding: 0 0 0 3rem;
     img{
-      height: 80%;
+      height: 95%;
     }
   }
   .blank{
