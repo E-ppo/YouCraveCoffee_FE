@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import MainBanner from '../assets/mainBanner.png';
 import Ranking from "../components/mainPage/Ranking";
-import SearchMenu from "../components/mainPage/SearchMenu";
+import SearchMenu from "../components/mainPage/Search/SearchMenu";
 
 
 
@@ -14,9 +14,7 @@ function Main() {
           <img src={MainBanner} alt="non" />
         </div>
         <Ranking/>
-        
-
-       
+        <SearchMenu/>
 
     </Wrap>
 
@@ -40,7 +38,7 @@ align-items: center;
 
   img{
     width: 100%;
-    max-height: 225px;
+    max-height: 220px;
     padding: 0.5rem 0 0 0;
     border-radius: 10px;
   }

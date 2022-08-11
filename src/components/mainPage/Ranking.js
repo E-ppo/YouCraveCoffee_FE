@@ -35,7 +35,7 @@ justify-content: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: lightgray;
+  background: rosybrown;
    .rankingBanner{
     width: 20%;
     img{

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Router from './util/Router';
-import Header from './components/Header';
+import Header from './components/public/Header';
 
 
 
