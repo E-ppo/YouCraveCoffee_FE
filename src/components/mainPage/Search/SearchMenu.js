@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Category from "./Category";
 import InputBox from "./InputBox";
 
 const SearchMenu = () => {
+  const navigate = useNavigate();
+
   return (
     <Wrap>
       <div className="searchWrap">
@@ -11,7 +14,10 @@ const SearchMenu = () => {
         <div className="inputDiv"><InputBox /></div>
         <div className="buttonDiv">
           <button>내가 쓴 글</button>
-          <button>글쓰기</button>
+          <button
+            onClick={()=>{
+              navigate("/write/cafeinfo")
+            }}>글쓰기</button>
         </div>
       </div>
     </Wrap>
