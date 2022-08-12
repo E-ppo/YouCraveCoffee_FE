@@ -60,7 +60,9 @@ const Wrap = styled.div`
   justify-content: center;
   position: relative;
   padding: 16px 16px 16px 16px;
-  background-color: white;
+  background-color: rosybrown;
+  color: white;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 .modal > section > header button {
@@ -71,7 +73,7 @@ const Wrap = styled.div`
   font-size: 21px;
   font-weight: 700;
   text-align: center;
-  color: #999;
+  color: white;
   background-color: transparent;
 }
 
