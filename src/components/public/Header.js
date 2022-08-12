@@ -1,24 +1,50 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import {TextLogo} from "../../assets/logo"
+import BasicModal from "./BasicModal"
+import Login from "../member/Login"
 
 const Header =()=>{
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalState, setModalState] = useState();
+  const [modalName, setModalName] = useState("");
+
+  const openModal = () => { setModalOpen(true); };
+  const closeModal = () => { setModalOpen(false); };
+
+
   return(
-    <Wrap>
-      <div className="headerManu">      
-        <div className="logoArea">
-          <img src={TextLogo}/>
+    <>
+      <Wrap>
+        <div className="headerManu">
+          <div className="logoArea">
+            <img src={TextLogo} />
+          </div>
+          <div className="blank">
+            Eppo님 어서오세요 :D
+          </div>
+          <div className="buttonArea">
+            <button 
+              onClick={()=>{
+              openModal();
+              setModalName("LogIn");
+              setModalState(<Login/>);
+              }}>로그인</button>
+            <button>회원가입</button>
+          </div>
         </div>
-        <div className="blank">
-          Eppo님 어서오세요 :D
-        </div>
-        <div className="buttonArea">
-          <button>로그인</button>
-          <button>회원가입</button>
-        </div>
-      </div>
-    </Wrap>
-  ) 
+      </Wrap>
+
+      <BasicModal 
+        open={modalOpen}
+        close={closeModal}
+        header={modalName}>
+          {modalState}
+      </BasicModal>
+      
+    </>
+  )
 } 
 export default Header;
 

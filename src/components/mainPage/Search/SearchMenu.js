@@ -22,6 +22,8 @@ export default SearchMenu;
 
 const Wrap = styled.div`
 width: 100%;
+display: flex;
+  justify-content: center;
 
 .searchWrap{
   max-width: 1200px;

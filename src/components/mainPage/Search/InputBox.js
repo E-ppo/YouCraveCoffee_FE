@@ -34,9 +34,11 @@ border-radius: 30px;
   input{
     display: flex;
     justify-content: center;
-    width:95%;
+    width:90%;
+    padding: 0.3rem;
     font-size: 1.5rem;
     border: none;
+    outline: none;
 
   }
 }

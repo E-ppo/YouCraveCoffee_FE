@@ -2,8 +2,10 @@ import React from "react";
 
 import styled from "styled-components";
 import MainBanner from '../assets/mainBanner.png';
+import PostList from "../components/mainPage/PostList";
 import Ranking from "../components/mainPage/Ranking";
 import SearchMenu from "../components/mainPage/Search/SearchMenu";
+
 
 
 
@@ -15,6 +17,7 @@ function Main() {
         </div>
         <Ranking/>
         <SearchMenu/>
+        <PostList/>
 
     </Wrap>
 
