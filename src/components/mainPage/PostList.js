@@ -9,7 +9,8 @@ const PostList = () =>{
       <div className="list">
         <div className="categoryIcon"></div>
         <div className="card">
-          <div className="imageBox">
+          <div 
+            className="imageBox">
             <img src={YellowLogoKo} alt="../../assets/logo/yellowLogoKo.png" />
           </div>
 
