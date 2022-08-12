@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import {TextLogo} from "../../assets/logo"
 import BasicModal from "./BasicModal"
-import Login from "../member/Login"
+import {Login, SignUp} from "../member"
 
 const Header =()=>{
 
@@ -25,13 +25,19 @@ const Header =()=>{
             Eppo님 어서오세요 :D
           </div>
           <div className="buttonArea">
-            <button 
-              onClick={()=>{
-              openModal();
-              setModalName("LogIn");
-              setModalState(<Login/>);
+            <button
+              onClick={() => {
+                openModal();
+                setModalName("LogIn");
+                setModalState(<Login />);
               }}>로그인</button>
-            <button>회원가입</button>
+
+            <button
+              onClick={() => {
+                openModal();
+                setModalName("SignUp");
+                setModalState(<SignUp />);
+              }}>회원가입</button>
           </div>
         </div>
       </Wrap>
