@@ -7,25 +7,25 @@ function WriteCafeInfo(){
   return(
     <Wrap>
 
-      <div className="titleInput">
-          <input type="text" placeholder="제목을 입력하세요"></input>
-      </div>
+      <TitleInput>
+          <input type="text" placeholder="✏ 제목을 입력하세요"></input>
+      </TitleInput>
 
       <hr/>
 
-      <div className="imageDiv">
+      <ImageDiv>
         <img src={YellowLogoKo} alt="../../assets/logo/yellowLogoKo.png" />
-      </div>
+      </ImageDiv>
 
-      <div className="cafeWrap">
+      <CafeInfoWrap>
         <AddCafeInfo/>
-      </div>
+      </CafeInfoWrap>
 
       <div className="textAreaDiv">
         <textarea placeholder="내용을 입력해주세요"></textarea>
       </div>
 
-      <button>등록하기</button>
+      <WriteButton>등록하기</WriteButton>
 
       
     </Wrap>
@@ -45,50 +45,53 @@ margin: 1rem 0 1rem 0 ;
 hr{
   width: 50%;
 }
+`;
 
-.titleInput{
+const TitleInput = styled.div`
+width: 100%;
   input{
-    font-size: 1rem;
+    width:100%;
+    font-size: 1.5rem;
     text-align: center;
     border: none;
     outline: none;
   }
-}
+`;
 
-.imageDiv{
+const ImageDiv = styled.div`
   display: flex;
   justify-content:center;
 
   img{
     width: 50%;
   }
-}
+`;
 
-.cafeWrap{
+const CafeInfoWrap = styled.div`
   width: 100%;
-}
 
-.textAreaDiv{
+  .textAreaDiv{
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 2rem 0 0 0;
 
   textarea{
-    width: 50%;
+    width: 100%;
     height: 20vh;
   }
 }
+`;
 
-button{
+const WriteButton = styled.div`
+display: flex;
+justify-content: center;
   width: 20%;
-  font-size: 1rem;
-  padding: 0.5rem;
+  font-size: rem;
+  padding: 1rem;
   margin: 2rem 0 0 0;
   border-radius: 30px;
   border: none;
   color: white;
   background: rosybrown;
-}
-
 `;
