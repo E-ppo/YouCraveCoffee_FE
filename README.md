@@ -16,7 +16,7 @@
 <br><br>
 # 당커땡 ver1 (2022.06.10 ~ 06.16)
 
-## 당커땡ver1 시연연상 : https://youtu.be/6HT5oZSCMGg
+### 당커땡ver1 시연연상 : https://youtu.be/6HT5oZSCMGg
 
 <details>
 <summary>구현페이지</summary>
