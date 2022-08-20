@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./page/Main"
-import WriteCafeInfo from "./page/cafe/WriteCafeInfo"
+import WritePost from "./page/WritePost"
 
 function Router() {
   return (
@@ -8,7 +8,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main/>} />
-        <Route path="/write/cafeinfo" element={<WriteCafeInfo/>} />
+        <Route path="/write/cafeinfo" element={<WritePost/>} />
       </Routes>
     </BrowserRouter>
     </>
