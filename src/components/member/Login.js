@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 const Login = () => {
+  const idRef = useRef();
+  const pwRef = useRef();
+
+
   return (
     <Wrap>
       
@@ -10,7 +14,10 @@ const Login = () => {
           <label>아이디</label>
         </div>
         <div className="inputArea">
-          <input type="text"></input>
+          <input 
+            type="text"
+            ref={idRef}
+            ></input>
         </div>
       </div>
 
@@ -19,18 +26,23 @@ const Login = () => {
           <label>비밀번호</label>
           </div>
         <div className="inputArea">
-          <input></input>
+          <input
+            type="text"
+            ref={pwRef}
+            ></input>
         </div>
       </div>
 
-      <div className="logInButtonDiv">
-        로그인
-      </div>
 
       <div className="socialLoginDiv">
         <div>카카오</div>
         <div>구글</div>
         <div>로그인</div>
+      </div>
+
+
+      <div className="logInButtonDiv">
+        로그인
       </div>
 
     </Wrap>
@@ -74,10 +86,10 @@ width: 100%;
   .logInButtonDiv{
     margin: 2rem 0 0 0;
     padding: 0.5rem;
-    width: 30%;
+    width: 100%;
     
     background: rosybrown;
-    border-radius: 25px;
+
     display: flex;
     justify-content: center;
     color: white;
