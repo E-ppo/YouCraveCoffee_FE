@@ -1,18 +1,26 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {TextLogo} from "../../assets/logo"
 import BasicModal from "./BasicModal"
 import {Login, SignUp} from "../member"
 
 const Header =()=>{
-
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState();
   const [modalName, setModalName] = useState("");
-
   const openModal = () => { setModalOpen(true); };
   const closeModal = () => { setModalOpen(false); };
 
+  const [windowWidth, setWindowWidth] = useState();
+  const handleResize = () =>{
+    setWindowWidth(window.innerWidth);
+  }
+  useEffect(()=>{
+    window.addEventListener('resize', handleResize);
+    return()=>{
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []);
 
   return(
     <>
@@ -21,9 +29,14 @@ const Header =()=>{
           <div className="logoArea">
             <img src={TextLogo} />
           </div>
-          <div className="blank">
-            Eppo님 어서오세요 :D
-          </div>
+          { windowWidth < 550 ? 
+          ""
+          :       
+            <div style={{display:"flex", width:"20%", alignItems:"center"}}>
+              Eppo님 어서오세요 
+            </div>
+          }
+   
           <div className="buttonArea">
             <button
               onClick={() => {
@@ -68,7 +81,7 @@ justify-content: center;
   display: flex;
 
   .logoArea{
-    width: 30%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -77,13 +90,7 @@ justify-content: center;
       height: 95%;
     }
   }
-  .blank{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: white;
-  }
+
   .buttonArea{
     width: 20%;
     display: flex;

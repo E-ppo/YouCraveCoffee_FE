@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import { YellowLogoKo } from "../../assets/logo"
-import AddCafeInfo from "../../components/cafe/AddCafeInfo"
+import AddCafeInfo from "./AddCafeInfo"
 
 function WriteCafeInfo(){
   return(
