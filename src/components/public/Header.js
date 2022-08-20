@@ -32,7 +32,7 @@ const Header =()=>{
           { windowWidth < 550 ? 
           ""
           :       
-            <div className="blank">
+            <div style={{display:"flex", width:"20%", alignItems:"center"}}>
               Eppo님 어서오세요 
             </div>
           }
@@ -81,7 +81,7 @@ justify-content: center;
   display: flex;
 
   .logoArea{
-    width: 30%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -90,13 +90,7 @@ justify-content: center;
       height: 95%;
     }
   }
-  .blank{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: white;
-  }
+
   .buttonArea{
     width: 20%;
     display: flex;
