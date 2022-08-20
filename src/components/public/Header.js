@@ -1,18 +1,26 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import {TextLogo} from "../../assets/logo"
 import BasicModal from "./BasicModal"
 import {Login, SignUp} from "../member"
 
 const Header =()=>{
-
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState();
   const [modalName, setModalName] = useState("");
-
   const openModal = () => { setModalOpen(true); };
   const closeModal = () => { setModalOpen(false); };
 
+  const [windowWidth, setWindowWidth] = useState();
+  const handleResize = () =>{
+    setWindowWidth(window.innerWidth);
+  }
+  useEffect(()=>{
+    window.addEventListener('resize', handleResize);
+    return()=>{
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []);
 
   return(
     <>
@@ -21,9 +29,14 @@ const Header =()=>{
           <div className="logoArea">
             <img src={TextLogo} />
           </div>
-          <div className="blank">
-            Eppo님 어서오세요 :D
-          </div>
+          { windowWidth < 550 ? 
+          ""
+          :       
+            <div className="blank">
+              Eppo님 어서오세요 
+            </div>
+          }
+   
           <div className="buttonArea">
             <button
               onClick={() => {
