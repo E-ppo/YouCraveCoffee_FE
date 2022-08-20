@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { userApi } from "../../api/userApi";
 
 const SignUp = () =>{
 
@@ -64,10 +65,13 @@ const SignUp = () =>{
   }
 
   const signUP = () =>{
-    console.log(id)
-    console.log(pw)
-    console.log(pwCheck)
-    console.log(nickName)
+    const data = {
+      username: id,
+      nickname: nickName,
+      password: pw,
+      passwordCheck: pwCheck
+    }
+    userApi.sighUp(data);
   }
 
   return (
