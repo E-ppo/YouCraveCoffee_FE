@@ -8,7 +8,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main/>} />
-        <Route path="/write/cafeinfo" element={<WritePost/>} />
+        <Route path="/write" element={<WritePost/>} />
       </Routes>
     </BrowserRouter>
     </>
